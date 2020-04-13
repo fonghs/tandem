@@ -1,0 +1,400 @@
+@charset "UTF-8";
+
+/* ------------------------
+	Header
+------------------------ */
+nav {
+  height: 80px;
+}
+
+.logosize {
+  width: 75px;
+  height: 75px;
+  text-align: center;
+}
+
+.headerlist li {
+  padding: 0 20px 0 20px;
+  font-size: 22px;
+}
+
+.header-icon {
+  font-size: 26px;
+}
+
+/* ------------------------
+	Footer
+------------------------ */
+.footer {
+  min-height: 300px;
+}
+/* //下到global */
+img {
+  max-width: 100%;
+}
+
+.titlesize {
+  width: 200px;
+  margin: auto;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* nav,
+footer {
+  background-color: #f0f0ee;
+} */
+footer {
+  background: white;
+}
+
+/* a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+  color: #005caf;
+} */
+
+footer {
+  min-height: 0%;
+  text-align: center;
+  color: #79cee2;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.footer_row {
+  margin: 26px 0 0;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+@media print, screen and (min-width: 768px) {
+  .footer_row {
+    margin-top: 26px;
+  }
+}
+
+.footer_icon {
+  font-size: 26px;
+}
+
+.footer_nav,
+.footer_icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.footer_nav {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.footer_nav li {
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+@media print, screen and (max-width: 767px) {
+  .footer_nav li {
+    width: 50%;
+  }
+  .footer_nav a {
+    padding: 11px 0;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .footer_icon li {
+    margin: 0 9px;
+    width: 40px;
+  }
+}
+
+.footer_copyright {
+  padding: 18px 0;
+  margin: 0;
+}
+
+.nav-link {
+  color: #79cee2;
+}
+
+.text-info:hover {
+  color: #005caf;
+}
+
+.footer_copyright small [lang='en'] {
+  font-family: monospace;
+}
+
+/* -----------update nav----------------- */
+.T-navWrapper {
+  margin: 0 auto;
+  /* width: 120rem; */
+  height: 5rem;
+  /* background: teal; */
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-wrap: nowrap; */
+  padding-bottom: 0.2rem;
+  padding-left: 16rem;
+  padding-right: 18rem;
+  background: white;
+}
+.T-logoWrapper {
+  width: 10rem;
+  height: 5rem;
+  /* background: lightblue; */
+}
+.T-logo {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+
+.T-linkWrapper {
+  width: 58rem;
+  margin-left: 1rem;
+  height: 5rem;
+  /* background: lightblue; */
+}
+.T-linklist {
+  display: flex;
+}
+.T-linkpart {
+  width: 10rem;
+  height: 5rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.T-linkpart h5 {
+  font-size: 1.2rem;
+  line-height: 5rem;
+  color: #79cee2;
+  transition: 0.3s;
+}
+.T-linkpart h5:hover {
+  transform: scale(1.2);
+  color: #005caf;
+}
+.T-personicon {
+  width: 15rem;
+  height: 5rem;
+
+  position: relative;
+}
+/* 會員登錄後頭像 */
+.T-personavatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  /* border: 0.2px solid black; */
+}
+.T-personavatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.T-personiconlist {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.T-personiconpart {
+  width: 3rem;
+  height: 3rem;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  /* background: lightcyan; */
+  /* margin: 0.1rem; */
+}
+.T-Mlogcardwrapper {
+  position: absolute;
+  z-index: 5;
+  bottom: 10rem;
+  right: 0;
+  transition: 0.75s;
+}
+.T-Mlogcardwrapper.active {
+  bottom: -42rem;
+}
+.T-detectgoodfriendwrapper {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  bottom: 8rem;
+}
+.T-detectgoodfriendwrapper.active {
+  bottom: -15rem;
+  z-index: 40;
+}
+
+/* 通知鈴鐺 */
+.T-notification.active {
+  animation: shocking infinite 3s;
+}
+
+@keyframes shocking {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+/* 正常狀態下rwd按鈕消失 */
+.T-rwdmenuwrapper {
+  display: none;
+}
+
+/* 購物車計量icon */
+.T-cartcount {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 1.2rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  background: #f9a451;
+  position: absolute;
+  top: 1.2rem;
+  left: 8rem;
+}
+
+@media screen and (max-width: 576px) {
+  .T-navWrapper {
+    width: 23.4375rem;
+    /* flex-wrap: wrap; */
+  }
+  .T-rwdmenuwrapper {
+    display: inline-block;
+    width: 10rem;
+    height: 5rem;
+    /* background-color: lightgreen; */
+  }
+  .T-rwdmenubtn {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 2.8rem;
+    /* background: lightpink; */
+    color: #f9a451;
+    z-index: 5;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 1rem;
+    position: relative;
+  }
+  .T-circlebg {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    top: -3rem;
+    left: 22rem;
+    background: #79cee2;
+    opacity: 0.9;
+    position: absolute;
+    transition: 1s;
+    animation: backgroundTransition 10s infinite;
+  }
+  @keyframes backgroundTransition {
+    0% {
+      background-color: #79cee2;
+    }
+    25% {
+      background-color: #005caf;
+    }
+    50% {
+      background-color: #adb6bd;
+    }
+    100% {
+      background-color: #79cee2;
+    }
+  }
+  .T-circlebg.active {
+    transform: scale(50);
+    z-index: 2;
+  }
+  .T-rwdmenucbtn {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: #f9a451;
+    /* background: lightgreen; */
+    position: absolute;
+    transition: 0.5s;
+    top: 0;
+    left: 14.5rem;
+    z-index: 4;
+  }
+  .T-rwdmenucbtn:hover {
+    color: #e4872a;
+  }
+
+  .T-rwdlinklist {
+    /* width: 10rem;
+    height: 20rem; */
+    /* background: pink; */
+    position: absolute;
+    z-index: 6;
+    bottom: -20.7rem;
+    left: -1rem;
+  }
+
+  .T-rwdlinkpart h5 {
+    width: 15rem;
+    height: 3rem;
+    margin: 0.3rem;
+    line-height: 6rem;
+    /* background: white; */
+    color: white;
+    /* border: 0.2px solid #79cee2; */
+    /* transition: 0.75s; */
+  }
+  .T-rwdlinkpart h5:hover {
+    /* color: white !important;
+    background: #79cee2; */
+  }
+  .T-linkicon {
+    margin-right: 1.2rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .T-personicon {
+    width: 15rem;
+  }
+
+  .T-linkWrapper {
+    display: none;
+  }
+}
